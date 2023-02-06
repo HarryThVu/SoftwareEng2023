@@ -1,0 +1,182 @@
+<!--HW1 Harry VU-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Page Title</title>
+		<!--Links to the css file-->
+		<link rel="stylesheet" type="text/css" href="/stylesheets/new-file.css">
+	</head>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"/> </script>
+	<script src="/javascripts/cheeseCakeFunction.js"></script>
+
+	<!--Some style changes to help match the example-->
+    <style>
+    	.orderButton{
+        	display: block;
+        }
+        .table3{
+        	margin-left: 30px;
+        }
+
+		/* 
+		 * External Citation
+		 * Author: w3schools
+		 * Date: Jan 2023
+		 * Issue: Used a premade hover dropdown as a base for my own
+		 * link: https://www.w3schools.com/howto/howto_css_dropdown.asp
+		 */
+
+		/* Dropdown Button */
+		.dropbtn {
+			background-color: #04AA6D;
+			color: white;
+			padding: 10px;
+			font-size: 16px;
+			border: none;
+		}
+
+		/* The container <div> - needed to position the dropdown content */
+		.dropdown {
+			position: relative;
+			margin-left: auto;
+			
+		}
+
+		/* Settings for the order detail display */
+		.hiddenMessage{
+        color:green; 
+		font-size:18px; 
+		font-weight:bold;
+		left: 130px;
+		
+		}
+
+		/* Dropdown Content (Hidden by Default) */
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			left: 130px;
+			right: auto;
+			top: 35px;
+			background-color: #f1f1f1;
+			width: 70px;
+			z-index: 1;
+			height:75px;
+			overflow-y: scroll;
+			
+		}
+
+		/* Links inside the dropdown */
+		.dropdown-content a {
+			color: black;
+			text-decoration: none;
+			display: block;
+		}
+
+		/* Change color of dropdown links on hover */
+		.dropdown-content a:hover {background-color: #ddd;}
+
+		/* Show the dropdown menu on hover */
+		.dropdown:hover .dropdown-content {display: block;}
+
+		/* Change the background color of the dropdown button when the dropdown content is shown */
+		.dropdown:hover .dropbtn {background-color: #3e8e41;}
+    </style>
+
+	<!-- Script for the selection month functuonality of the hover dropdown -->
+	
+
+	<body class="body1">
+    	<h1>Cheesecake Order Form</h1>
+		<!--Where the cheesecake image is placed-->
+		<img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg" width="200px" height="200px"></th> 
+		<table class="table1">
+            <tr>
+				<td>Quantity Topping</td>
+            </tr>
+		</table>
+
+		<!-- Where the order details will be displayed when the user presses the order button-->
+		<div id="hiddenMessage" style = "font-size:20px; font-weight:bold;"></div>
+
+		<!--The order detail area. The section that will be hidden when the order is successfully placed.-->
+		<div class="orderDiv" id = "orderSection">
+			<table class="table2">
+				<tr>
+					<!--For the option function that allows user to select the quantity of toppings-->
+					<th style="padding-right: 25px"><select id="toppings">
+						<option value="0">0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+					</select></th>
+					<!--For the radio selections-->
+					<td><div class="div1">
+						<input type="radio" id="Plain" name="topping" value="Plain" checked>
+						<label for="Plain">Plain</label><br>
+						<input type="radio" id="Cherry" name="topping" value="Cherry">
+						<label for="Cherry">Cherry</label><br>
+						<input type="radio" id="Chocolate" name="topping" value="Chocolate">
+						<label for="Chocolate">Chocolate</label>
+					</div></td>
+				</tr>
+			</table>
+
+			<!--Text box code-->
+			<label for="text">Notes:</label><br>
+			<textarea id="text" name="text" rows="4" cols="40">Enter any special instructions here.</textarea>
+			<p><button id="orderButton" type="button" value="Order">Order</button></p>
+		</div>
+
+		<!-- Script for making the order button function -->
+		<script src="/javascripts/cheeseCakeFunction2.js"></script>
+	
+
+		
+
+		<!--For the final bottom area that stores the total orders info for selected month.-->
+		<div class="div2">
+			<table class="table4">
+				<tr>
+		 			<!--External Citation
+		 				Author: w3schools
+		 				Date: Jan 2023
+		 				Issue: Used a premade hover dropdown as a base for my own
+		 				link: https://www.w3schools.com/howto/howto_css_dropdown.asp-->
+					<!-- For the dropdown selection -->
+					<div class="dropdown">
+						<h2>Total Orders<input id="months" class="dropbtn" value="Feb" type="button"></h2>
+						<div class="dropdown-content">
+							<input type="button" id="jan" value="Jan">
+							<input type="button" id="feb" value="Feb">
+							<input type="button" id="mar" value="Mar">
+							<input type="button" id="apr" value="Apr">
+							<input type="button" id="may" value="May">
+							<input type="button" id="jun" value="Jun">
+							<input type="button" id="jul" value="Jul">
+							<input type="button" id="aug" value="Aug">
+							<input type="button" id="sep" value="Sep">
+							<input type="button" id="oct" value="Oct">
+							<input type="button" id="nov" value="Nov">
+							<input type="button" id="dec" value="Dec">
+						</div>
+					</div>
+				</tr>
+			</table>
+			<!-- Where the info about the months details is displayed.-->
+        	<table class="table3" CELLSPACING=0>
+        		<tr>
+        			<td>&bull; 11 cherry</td>
+        		<tr>
+            	<tr>
+        			<td>&bull; 17 chocolate</td>
+        		<tr>
+           	    <tr>
+        			<td>&bull; 31 plain</td>
+        		<tr>
+        	</table>
+		</div>
+	</body>
+</html>

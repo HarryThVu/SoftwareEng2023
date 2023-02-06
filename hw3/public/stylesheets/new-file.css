@@ -1,0 +1,31 @@
+/* HW1 Harry Vu */
+
+body{ /* Changes background of whole page */
+    background-color: grey;
+
+}
+div.div2{ /* Changes background of last month area */
+     background-color:bisque;
+}
+
+h1{ /* Changes background of title area*/
+    background-color: bisque;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+table.table2{ /* Changes background of topping selection area */
+    background-color: bisque;
+}
+
+img{ /* Changes position of image and makes the border of image more rounded */
+    border-radius: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.orderButton{ /* Changes position of button and the size of it */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
